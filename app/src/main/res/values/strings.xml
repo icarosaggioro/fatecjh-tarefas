@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Tarefas</string>
+
+    <string name="action_criar">Criar</string>
+    <string name="action_salvar">Salvar</string>
+    <string name="prompt_tipo_tarefa">Tipo da Tarefa</string>
+    <string name="title_activity_criar_tarefas">Criar Uma Tarefa</string>
+
+
+    <string-array name="array_tipo_tarefa">
+        <item>Pessoal</item>
+        <item>Trabalho</item>
+        <item>Faculdade</item>
+        <item>Sonhos futuros</item>
+        <item>Lista de supermercado</item>
+        <item>Presente</item>
+    </string-array>
+
+    <string-array name="array_status_tarefa">
+        <item>Nova</item>
+        <item>Em Execucao</item>
+        <item>Finalizada</item>
+    </string-array>
+
+
+</resources>
