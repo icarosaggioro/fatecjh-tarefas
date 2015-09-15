@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import edu.fatecjh.si.pdm.tarefas.persistence.TarefaDAO;
+
 /**
  * Created by Icaro on 12/06/2015.
  */
@@ -19,7 +21,7 @@ public class TarefasAdapter extends BaseAdapter {
 
     public TarefasAdapter(Context ctx) {
         this.context = ctx;
-        this.lista = RepositorioTarefa.pegarTodos();
+        this.lista = TarefaDAO.getInstance(context).pegarTodos();
     }
 
     @Override
@@ -34,7 +36,7 @@ public class TarefasAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return position;
+        return lista[position].codigo;
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -72,7 +74,7 @@ public class TarefasAdapter extends BaseAdapter {
 
     @Override
     public void notifyDataSetChanged() {
-        this.lista = RepositorioTarefa.pegarTodos();
+        this.lista = TarefaDAO.getInstance(context).pegarTodos();
         super.notifyDataSetChanged();
     }
 }

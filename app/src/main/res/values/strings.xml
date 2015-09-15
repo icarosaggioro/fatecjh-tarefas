@@ -3,9 +3,12 @@
 
     <string name="action_criar">Criar</string>
     <string name="action_salvar">Salvar</string>
+    <string name="prompt_titulo_tarefa">Titulo da Tarefa</string>
+    <string name="prompt_descricao_tarefa">Descrição da Tarefa</string>
     <string name="prompt_tipo_tarefa">Tipo da Tarefa</string>
+    <string name="prompt_status_tarefa">Status da Tarefa</string>
     <string name="title_activity_criar_tarefas">Criar Uma Tarefa</string>
-
+    <string name="title_activity_detalhes_tarefa">Detalhes da Tarefa</string>
 
     <string-array name="array_tipo_tarefa">
         <item>Pessoal</item>
@@ -21,6 +24,7 @@
         <item>Em Execucao</item>
         <item>Finalizada</item>
     </string-array>
+
 
 
 </resources>

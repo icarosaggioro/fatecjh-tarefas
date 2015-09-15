@@ -9,6 +9,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import edu.fatecjh.si.pdm.tarefas.persistence.TarefaDAO;
+
 
 public class CriarTarefaActivity extends ActionBarActivity  {
 
@@ -77,7 +79,7 @@ public class CriarTarefaActivity extends ActionBarActivity  {
 
 
         // Persistencia
-        RepositorioTarefa.criar(tar);
+        TarefaDAO.getInstance(this).criar(tar);
 
     }
 

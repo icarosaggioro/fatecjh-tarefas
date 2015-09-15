@@ -11,6 +11,8 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
+import edu.fatecjh.si.pdm.tarefas.persistence.TarefaDAO;
+
 public class ListaTarefasActivity extends ActionBarActivity {
 
     BaseAdapter adpt;
@@ -33,7 +35,9 @@ public class ListaTarefasActivity extends ActionBarActivity {
                 new AdapterView.OnItemClickListener(){
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        // Iniciar Activity para visualizar a Tarefa
+                        Intent detalhes = new Intent(ListaTarefasActivity.this, DetalhesTarefaActivity.class);
+                        detalhes.putExtra(DetalhesTarefaActivity.PARAM_COD_TAREFA, id);
+                        startActivity(detalhes);
                     }
                 }
         );
@@ -43,8 +47,9 @@ public class ListaTarefasActivity extends ActionBarActivity {
                     @Override
                     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                         // Pega a Tarefa no Repositorio
-                        Tarefa tar = RepositorioTarefa.pegar(id);
+                        Tarefa tar = TarefaDAO.getInstance(ListaTarefasActivity.this).pegar(id);
                         tar.status = StatusTarefa.COMPLETA;
+                        TarefaDAO.getInstance(ListaTarefasActivity.this).atualizar(tar);
                         adpt.notifyDataSetChanged();
                         return false;
                     }
