@@ -3,6 +3,7 @@ package edu.fatecjh.si.pdm.tarefas;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.DatePicker;
@@ -12,7 +13,7 @@ import android.widget.Spinner;
 import edu.fatecjh.si.pdm.tarefas.persistence.TarefaDAO;
 
 
-public class CriarTarefaActivity extends ActionBarActivity  {
+public class CriarTarefaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

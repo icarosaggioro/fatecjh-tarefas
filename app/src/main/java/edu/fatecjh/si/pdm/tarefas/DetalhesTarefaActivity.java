@@ -2,8 +2,9 @@ package edu.fatecjh.si.pdm.tarefas;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-public class DetalhesTarefaActivity extends ActionBarActivity {
+public class DetalhesTarefaActivity extends AppCompatActivity {
 
     public static final String PARAM_COD_TAREFA = "PARAM_COD_TAREFA";
 

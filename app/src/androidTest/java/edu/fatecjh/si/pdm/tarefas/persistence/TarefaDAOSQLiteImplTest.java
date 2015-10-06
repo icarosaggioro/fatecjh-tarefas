@@ -27,7 +27,7 @@ public class TarefaDAOSQLiteImplTest extends AndroidTestCase {
         super.tearDown();
     }
 
-    public void testAddEntry(){
+    public void testCriarTarefa(){
         Tarefa tar = new Tarefa();
         tar.titulo = "Titulo 1";
         tar.descricao = "Descrica 1";
@@ -36,8 +36,29 @@ public class TarefaDAOSQLiteImplTest extends AndroidTestCase {
         tar.status = StatusTarefa.NOVA;
         tar.tipo = TipoTarefa.PRESENTE;
 
-        assertTrue(db.criar(tar) > 0);
+        long id = db.criar(tar);
+
+        assertTrue(id > 0);
 
     }
+
+    public void testPegarTarefa(){
+        Tarefa tar = new Tarefa();
+        tar.titulo = "Titulo 1";
+        tar.descricao = "Descrica 1";
+        tar.dataCriacao = 1000000;
+        tar.dataCumprimento = 10000001;
+        tar.status = StatusTarefa.NOVA;
+        tar.tipo = TipoTarefa.PRESENTE;
+        long id = db.criar(tar);
+
+        Tarefa tar2 = db.pegar(id);
+
+        assertNotNull(tar2);
+        assertTrue(tar.titulo.equals(tar2.titulo));
+
+    }
+
+
 
 }

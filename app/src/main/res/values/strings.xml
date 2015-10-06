@@ -24,6 +24,7 @@
         <item>Em Execucao</item>
         <item>Finalizada</item>
     </string-array>
+    <string name="title_activity_abertura">AberturaActivity</string>
 
 
 

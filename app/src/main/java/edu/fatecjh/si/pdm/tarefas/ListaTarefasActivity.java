@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,7 +14,7 @@ import android.widget.ListView;
 
 import edu.fatecjh.si.pdm.tarefas.persistence.TarefaDAO;
 
-public class ListaTarefasActivity extends ActionBarActivity {
+public class ListaTarefasActivity extends AppCompatActivity {
 
     BaseAdapter adpt;
 
